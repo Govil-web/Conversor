@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.conversor.Controller">
+   <children>
+      <AnchorPane prefHeight="65.0" prefWidth="600.0" style="-fx-background-color: #0e203d;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="68.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Separator prefWidth="200.0" visible="false" />
+                  <ImageView fitHeight="55.0" fitWidth="40.0" onMouseClicked="#convertButtomClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/conversor.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Separator prefWidth="200.0" visible="false" />
+                  <ImageView fitHeight="55.0" fitWidth="40.0" onMouseClicked="#convertCurrencyClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/currency.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Separator prefWidth="200.0" visible="false" />
+                  <ImageView fitHeight="55.0" fitWidth="40.0" onMouseClicked="#convertTemperatureClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/temperatura.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Separator prefWidth="200.0" visible="false" />
+                  <ImageView fitHeight="55.0" fitWidth="40.0" onMouseClicked="#convertMeasurementClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/medidas.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Separator prefWidth="200.0" visible="false" />
+                  <ImageView fitHeight="55.0" fitWidth="40.0" onMouseClicked="#exitOnButtomClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/close.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Separator prefWidth="200.0" visible="false" />
+               </children>
+            </HBox>
+         </children></AnchorPane>
+      <AnchorPane fx:id="indexPane" layoutY="86.0" prefHeight="314.0" prefWidth="600.0" style="-fx-background-color: #0e203d;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fitHeight="68.0" fitWidth="99.0" layoutX="14.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="169.0" layoutY="43.0" prefHeight="49.0" prefWidth="261.0" text="CONVERTER" textFill="#80b3df">
+               <font>
+                  <Font name="Britannic Bold" size="50.0" />
+               </font>
+            </Label>
+            <Label layoutX="222.0" layoutY="107.0" onMouseClicked="#convertCurrencyClicked" prefHeight="50.0" prefWidth="164.0" text="CURRENCY" textFill="#80b3df">
+               <font>
+                  <Font name="Britannic Bold" size="30.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="198.0" layoutY="228.0" onMouseClicked="#convertMeasurementClicked" prefHeight="50.0" prefWidth="203.0" text="MEASUREMENT" textFill="#80b3df">
+               <font>
+                  <Font name="Britannic Bold" size="30.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="198.0" layoutY="166.0" onMouseClicked="#convertTemperatureClicked" prefHeight="50.0" prefWidth="203.0" text="TEMPERATURA" textFill="#80b3df">
+               <font>
+                  <Font name="Britannic Bold" size="30.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane fx:id="currencyPane" layoutY="85.0" prefHeight="314.0" prefWidth="600.0" style="-fx-background-color: #0e203d;" visible="false" AnchorPane.bottomAnchor="0.6000000000000227" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="68.0" prefWidth="172.0" text="CONVERTER" textFill="#466576">
+               <font>
+                  <Font name="Berlin Sans FB" size="30.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboBoxCurrencyFrom" layoutX="210.0" layoutY="76.0" onAction="#onComboCurrencyFrom" prefWidth="150.0" />
+            <ComboBox fx:id="comboBoxCurrencyTo" disable="true" layoutX="210.0" layoutY="119.0" onAction="#onAmountCurrency" prefWidth="150.0" />
+            <Label layoutX="135.0" layoutY="77.0" text="FROM" textFill="#466576">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="163.0" layoutY="120.0" text="TO" textFill="#466576">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="amountCurrency" disable="true" focusColor="#162b1d" layoutX="218.0" layoutY="165.0" promptText="AMOUNT " style="-fx-text-fill: #41d95d;" unFocusColor="#3fec5c">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="198.0" layoutY="239.0" text="RESULT" textFill="#466576">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="buttonCurrency" buttonType="RAISED" layoutX="251.0" layoutY="213.0" onMouseClicked="#botonCovert" style="-fx-background-color: #ced3db;" text="CONVERT" textFill="#627276" textOverrun="WORD_ELLIPSIS" />
+            <JFXTextField fx:id="convertedAmount" editable="false" focusColor="#162b1d" layoutX="218.0" layoutY="262.0" promptText="CONVERTED AMOUNT " style="-fx-text-fill: #41d95d;" unFocusColor="#3fec5c">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton buttonType="RAISED" layoutX="367.0" layoutY="241.0" onMouseClicked="#botonBorrar" prefHeight="26.0" prefWidth="56.0" style="-fx-background-color: #ced3db;" text="CLEAN" textFill="#627276" textOverrun="WORD_ELLIPSIS" />
+            <ImageView fitHeight="98.0" fitWidth="140.0" layoutX="439.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="92.0" fitWidth="108.0" layoutX="451.0" layoutY="14.0">
+               <image>
+                  <Image url="@images/currencyImages.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="temperaturePane" layoutX="20.0" layoutY="106.0" prefHeight="314.0" prefWidth="600.0" style="-fx-background-color: #0e203d;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="14.0" prefHeight="68.0" prefWidth="203.0" text="TEMPERATURE" textFill="#466576">
+               <font>
+                  <Font name="Berlin Sans FB" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="151.0" layoutY="67.0" text="FROM" textFill="#466576">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboBoxTemperatureFrom" layoutX="225.0" layoutY="66.0" onAction="#onComboTemperatureFrom" prefWidth="150.0" />
+            <Label layoutX="151.0" layoutY="109.0" text="TO" textFill="#466576">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboBoxTemperatureTo" disable="true" layoutX="225.0" layoutY="108.0" onAction="#onAmountTemperature" prefWidth="150.0" />
+            <JFXButton fx:id="buttonTemp" buttonType="RAISED" layoutX="266.0" layoutY="188.0" onMouseClicked="#botonCovertTemp" style="-fx-background-color: #ced3db;" text="CONVERT" textFill="#627276" textOverrun="WORD_ELLIPSIS" />
+            <JFXTextField fx:id="amountTemperature" disable="true" focusColor="#162b1d" layoutX="238.0" layoutY="153.0" promptText="AMOUNT " style="-fx-text-fill: #41d95d;" unFocusColor="#3fec5c">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="203.0" layoutY="230.0" text="RESULT" textFill="#466576">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="convertedAmountTemp" editable="false" focusColor="#162b1d" layoutX="229.0" layoutY="262.0" promptText="CONVERTED AMOUNT " style="-fx-text-fill: #41d95d;" unFocusColor="#3fec5c">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton buttonType="RAISED" layoutX="375.0" layoutY="238.0" onMouseClicked="#botonBorrarTemp" prefHeight="26.0" prefWidth="56.0" style="-fx-background-color: #ced3db;" text="CLEAN" textFill="#627276" textOverrun="WORD_ELLIPSIS" />
+            <ImageView fitHeight="108.0" fitWidth="129.0" layoutX="443.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/temperatureIm.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane fx:id="medidasPane" layoutX="30.0" layoutY="116.0" prefHeight="314.0" prefWidth="600.0" style="-fx-background-color: #0e203d;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="14.0" layoutY="7.0" prefHeight="68.0" prefWidth="231.0" text="MEASUREMENT" textFill="#466576">
+               <font>
+                  <Font name="Berlin Sans FB" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="166.0" layoutY="72.0" text="FROM" textFill="#466576">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboBoxLengthFrom" layoutX="232.0" layoutY="68.0" onAction="#onComboLengthFrom" prefWidth="150.0" />
+            <Label layoutX="166.0" layoutY="115.0" text="TO" textFill="#466576">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboBoxLengthTo" disable="true" layoutX="232.0" layoutY="114.0" onAction="#onAmountLen" prefWidth="150.0" />
+            <JFXButton fx:id="buttonLon" buttonType="RAISED" layoutX="275.0" layoutY="190.0" onMouseClicked="#botonCovertLon" style="-fx-background-color: #ced3db;" text="CONVERT" textFill="#627276" textOverrun="WORD_ELLIPSIS" />
+            <JFXTextField fx:id="amountLength" disable="true" focusColor="#162b1d" layoutX="244.0" layoutY="153.0" promptText="AMOUNT " style="-fx-text-fill: #41d95d;" unFocusColor="#3fec5c">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="217.0" layoutY="232.0" text="RESULT" textFill="#466576">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="convertedAmountLen" editable="false" focusColor="#162b1d" layoutX="241.0" layoutY="257.0" promptText="CONVERTED AMOUNT " style="-fx-text-fill: #41d95d;" unFocusColor="#3fec5c">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton buttonType="RAISED" layoutX="389.0" layoutY="228.0" onMouseClicked="#botonBorrarLon" prefHeight="26.0" prefWidth="56.0" style="-fx-background-color: #ced3db;" text="CLEAN" textFill="#627276" textOverrun="WORD_ELLIPSIS" />
+            <ImageView fitHeight="117.0" fitWidth="150.0" layoutX="439.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/medidasImeges.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <ImageView fx:id="cursorIndex" fitHeight="21.0" fitWidth="14.0" layoutX="81.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/cursor.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="cursorCurrency" fitHeight="21.0" fitWidth="14.0" layoutX="190.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@images/cursor.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="cursorTemperature" fitHeight="21.0" fitWidth="14.0" layoutX="293.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@images/cursor.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="cursorMedidas" fitHeight="21.0" fitWidth="14.0" layoutX="406.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@images/cursor.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
